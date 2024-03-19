@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const alarmHourInput = document.querySelector('.alarmHour');
   const alarmMinuteInput = document.querySelector('.alarmMinute');
   const alarmIndicator = document.querySelector('.alarmIndicator p');
+  const alarmAudio = document.querySelector('alarmAudio');
 
   // Display current time
   function updateClock() {
@@ -23,13 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function playAlarm() {
-    // You can replace 'alarm_sound.mp3' with your own alarm sound file
-    const alarmAudio = new Audio('./assets/Audio/audio.mp3');
+    const alarmAudio = new Audio('./assets/audio/ringtone.mp3');
     alarmAudio.play();
     
       // Pause the alarm audio after 30 seconds
     setTimeout(() => {
       alarmAudio.pause();
+      alarmAudio.currentTime = 0; // Reset audio to start
     }, 30000); // 30 seconds in milliseconds
   }
 
@@ -43,26 +44,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Validate inputs
     const hour = parseInt(alarmHourInput.value);
     const minute = parseInt(alarmMinuteInput.value);
-    
-
-    if (isNaN(hour) || hour < 0 || hour > 23 || isNaN(minute) || minute < 0 || minute > 59) {
-      alarmIndicator.textContent = 'Please enter valid hour (0-23) and minute (0-59).';
-      alarmIndicator.style.display = 'block';
-      return;
-    }
 
     const hourString = String(hour).padStart(2, '0'); // Ensure leading zero
     const minuteString = String(minute).padStart(2, '0'); // Ensure leading zero
     
-  
-    alarmIndicator.textContent = 'Alarm set for ' + hourString + ':' + minuteString;
-    alarmIndicator.style.display = 'block';
-  });
 
-  // Function to play alarm sound
-  function playAlarm() {
-    // You can replace 'alarm_sound.mp3' with your own alarm sound file
-    const alarmAudio = new Audio('./assets/Audio/audio.mp3');
-    alarmAudio.play();
-  }
+    if (isNaN(hour) || hour < 0 || hour > 23 || isNaN(minute) || minute < 0 || minute > 59) {
+      alarmIndicator.textContent = 'Please enter valid hour (0-23) and minute (0-59).';
+      return;
+    } else
+    alarmIndicator.textContent = 'Alarm set for ' + hourString + ':' + minuteString;
+  });
 });

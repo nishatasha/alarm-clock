@@ -17,7 +17,7 @@ body {
   background-color: var(--primary-color);
 }
 
-h1, h2, p, label {
+h1, h2, p {
   color: var(--secondary-color);
 }
   
@@ -30,25 +30,27 @@ h1, h2, p, label {
 }
 
 .clock {
-  font-size: 5em;
+  font-size: 7em;
   color: var(--secondary-color);
 }
 
 ::placeholder {
   text-align: center;
-  color: var(--secondary-color);
+  color: var(--text-light);
 }
 
 input[type=text] {
   padding: 0.5rem;
   border-radius: 5rem;
-  width: 7rem;
-  height: 4rem;
+  width: 7.5rem;
+  height: 4.5rem;
   color: var(--secondary-color);
+  text-align: center;
 }
 
 input {
   background-color: #1f2028;
+  margin: 0.6rem;
 }
   
 .alarmForm {
@@ -58,9 +60,11 @@ input {
 .alarmIndicator p {
   margin-top: 20px;
   display: none;
-  color: red;
+  color: var(--secondary-color);
   font-weight: bold;
   cursor: pointer;
+  display: block;
+  color: #cfcdc7;
 }
 
 button {
@@ -68,6 +72,9 @@ button {
   padding: 1rem;
   border-radius: 5rem;
   color: var(--secondary-color);
+  margin: 0.6rem;
+  height: 4.5rem;
+  width: 12rem;
 }
 
 button:hover{
@@ -75,11 +82,7 @@ button:hover{
   transition: all 0.2s ease-in-out;
 }
 
-.alarmIndicator p{
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 50px;
-  height: 100%;
-  width: 100%;
-  background-color: #a6a9ba;
+form {
+  width: auto;
+  height: auto;
 }

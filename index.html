@@ -16,25 +16,23 @@
       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,
       400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet">
-      <link rel="stylesheet" href="./assets/icons/icon.png"> 
+      <link rel="stylesheet" href="./assets/icons/bell.png"> 
       <link rel="stylesheet" href="./assets/style/index.css">
       <link rel="stylesheet" href="./assets/style/reset.css">
       <script src="./assets/script/index.js" defer></script>
   </head>
   <body>
       <div class="container">
-          <h1>Alarm Clock</h1>
           <div class="clock"></div>
           <form class="alarmForm">
-            <label for="alarmHour"></label>
             <input type="text" class="alarmHour"  placeholder="HH" min="0" max="23" required>
-            <label for="alarmMinute"></label>
             <input type="text" class="alarmMinute" placeholder="MM" min="0" max="59" required>
-            <button>Set Alarm</button>
+            <button class="click">Set Alarm</button>
           </form>
           <div class="alarmIndicator">
-            <p></p>
+            <p>CREATE YOUR ALARM</p>
           </div>
+          <audio class="alarmAudio" src="./assets/audio/ringtone.mp3"></audio>
         </div>
   </body>
 </html>
