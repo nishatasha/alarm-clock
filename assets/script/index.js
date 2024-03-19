@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const alarmHourInput = document.querySelector('.alarmHour');
   const alarmMinuteInput = document.querySelector('.alarmMinute');
   const alarmIndicator = document.querySelector('.alarmIndicator p');
-  const alarmAudio = document.querySelector('alarmAudio');
+  const alarmAudio = document.querySelector('.alarmAudio');
 
   // Display current time
   function updateClock() {
