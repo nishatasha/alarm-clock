@@ -60,6 +60,7 @@ input {
   display: none;
   color: red;
   font-weight: bold;
+  cursor: pointer;
 }
 
 button {
@@ -69,36 +70,16 @@ button {
   color: var(--secondary-color);
 }
 
+button:hover{
+  background-color: rgb(151, 27, 5);
+  transition: all 0.2s ease-in-out;
+}
+
 .alarmIndicator p{
   font-size: 18px;
   font-weight: 600;
   line-height: 50px;
   height: 100%;
   width: 100%;
-  background-color: #15161b;
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 600px; /* Adjust max-width as needed */
-    margin: 0 auto; /* Center the container */
-  }
-
-  .container h1 {
-    font-size: 4rem;
-  }
-
-  .clock {
-    font-size: 5em;
-  }
-
-  input[type="text"] {
-    width: 50%;
-    max-width: 300px; /* Adjust max-width as needed */
-  }
-
-  button {
-    width: 50%;
-    max-width: 300px; /* Adjust max-width as needed */
-  }
+  background-color: #a6a9ba;
 }

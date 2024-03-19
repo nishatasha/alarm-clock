@@ -24,11 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function playAlarm() {
     // You can replace 'alarm_sound.mp3' with your own alarm sound file
-    const alarmAudio = new Audio('alarm_sound.mp3');
+    const alarmAudio = new Audio('./assets/Audio/audio.mp3');
     alarmAudio.play();
     
-  
-    // Pause the alarm audio after 30 seconds
+      // Pause the alarm audio after 30 seconds
     setTimeout(() => {
       alarmAudio.pause();
     }, 30000); // 30 seconds in milliseconds
