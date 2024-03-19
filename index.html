@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale1">
+      <meta name="author" content="Nishat Jahan Asha">
+      <meta name="description" content="spacing">
+      <meta name="keywords" content="html, css, web, web development, javascript">
+      <title>Alarm Clock</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,
+      400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet">
+      <link rel="stylesheet" href="./assets/icons/icon.png"> 
+      <link rel="stylesheet" href="./assets/style/index.css">
+      <link rel="stylesheet" href="./assets/style/reset.css">
+      <script src="./assets/script/index.js" defer></script>
+  </head>
+  <body>
+      <div class="container">
+          <h1>Alarm Clock</h1>
+          <div class="clock"></div>
+          <form class="alarmForm">
+            <label for="alarmHour"></label>
+            <input type="text" class="alarmHour"  placeholder="HH" min="0" max="23" required>
+            <label for="alarmMinute"></label>
+            <input type="text" class="alarmMinute" placeholder="MM" min="0" max="59" required>
+            <button>Set Alarm</button>
+          </form>
+          <div class="alarmIndicator">
+            <p></p>
+          </div>
+        </div>
+  </body>
+</html>

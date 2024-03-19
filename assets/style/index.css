@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+:root {
+  --primary-color: #15161b;
+  --secondary-color: #fafbfe;
+  --text-dark: #282d31;
+  --text-light: #767268;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--primary-color);
+}
+
+h1, h2, p, label {
+  color: var(--secondary-color);
+}
+  
+.container {
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 4rem;
+}
+
+.clock {
+  font-size: 5em;
+  color: var(--secondary-color);
+}
+
+::placeholder {
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+input[type=text] {
+  padding: 0.5rem;
+  border-radius: 5rem;
+  width: 7rem;
+  height: 4rem;
+  color: var(--secondary-color);
+}
+
+input {
+  background-color: #1f2028;
+}
+  
+.alarmForm {
+  margin-top: 20px;
+}
+  
+.alarmIndicator p {
+  margin-top: 20px;
+  display: none;
+  color: red;
+  font-weight: bold;
+}
+
+button {
+  background-color:rgb(195, 36, 8);
+  padding: 1rem;
+  border-radius: 5rem;
+  color: var(--secondary-color);
+}
+
+.alarmIndicator p{
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 50px;
+  height: 100%;
+  width: 100%;
+  background-color: #15161b;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 600px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the container */
+  }
+
+  .container h1 {
+    font-size: 4rem;
+  }
+
+  .clock {
+    font-size: 5em;
+  }
+
+  input[type="text"] {
+    width: 50%;
+    max-width: 300px; /* Adjust max-width as needed */
+  }
+
+  button {
+    width: 50%;
+    max-width: 300px; /* Adjust max-width as needed */
+  }
+}
